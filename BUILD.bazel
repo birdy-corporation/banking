@@ -1,0 +1,14 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+#load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+load("@pip//:requirements.bzl", "requirement")
+load("@python_versions//3.11:defs.bzl", "compile_pip_requirements")
+
+
+compile_pip_requirements(
+    name = "py_transitive_requirements",
+    requirements_in = "requirements.txt",
+    requirements_txt = "requirements_lock.txt",
+    visibility = ["//visibility:public"],
+)
+
+
