@@ -18,4 +18,6 @@ pip.parse(
     requirements_lock = "//:requirements_lock.txt",
 )
 
+print(pip.__dict__)
+
 use_repo(pip, "pip_311", "pip")

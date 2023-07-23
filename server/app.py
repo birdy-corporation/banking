@@ -3,7 +3,7 @@
 import json
 from dataclasses import dataclass
 from flask import Flask
-
+from nacl.secret import SecretBox
 
 app = Flask(__name__)
 

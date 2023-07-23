@@ -7,6 +7,7 @@ py_binary(
     main = "app.py",
     visibility = ["//visibility:public"],
     deps = [
-        requirement("Flask") 
+        requirement("Flask"),
+        requirement("pynacl"),
     ],
 )
